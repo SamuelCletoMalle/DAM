@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies codcentro="28003094">
+    <alumnos>
+        <alumno nif="32334983B" necesidadesespaciales="false">
+         <nombreC>José Manuel Perez</nombreC>
+         <email>jperez@gmail.com</email>
+         <direccion>
+          <codPostal>28093 </codPostal>
+          <provincia>Cadiz</provincia>
+         </direccion>
+         <notaMedia>4.10</notaMedia>
+         <grupoMat>1DAM</grupoMat>
+        </alumno>
+        <alumno necesidadesespaciales="true">
+          <nombreC> Ana Pérez</nombreC>
+          <direccion>
+              <provincia>Madrid</provincia>
+              <codPostal>11012 </codPostal>
+          </direccion>
+          <notaMedia>7.23</notaMedia>
+          <grupoMat>1DAM</grupoMat>
+         </alumno>
+      </alumnos>
+    <grupos> 
+        <grupo id="123">
+            <nombre>1DAM</nombre>
+            <nivel>CFGS</nivel>
+        </grupo>
+        <grupo>
+            <nombre>1SMR</nombre>
+            <nivel>CFGM</nivel>
+        </grupo>
+    </grupos>
+</ies>
