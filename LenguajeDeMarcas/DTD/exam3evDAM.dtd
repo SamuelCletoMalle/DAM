@@ -1,0 +1,23 @@
+<!ELEMENT ies (alumnos|grupos)*>
+        <!ATTLIST ies
+                codcentro CDATA "[0-9]{8}">
+        <!ELEMENT alumnos (alumno)*>
+        <!ELEMENT alumno (nombreC|email|direccion|notaMedia|grupoMat)*>
+        <!ATTLIST alumno
+                necesidadesespaciales CDATA #REQUIRED
+                nif CDATA #IMPLIED>
+        <!ELEMENT nombreC (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT direccion (codPostal|provincia)*>
+        <!ELEMENT codPostal (#PCDATA)>
+        <!ELEMENT provincia (#PCDATA)>
+        <!ELEMENT notaMedia (#PCDATA)>
+        <!ELEMENT grupoMat (#PCDATA)>
+        <!ELEMENT grupos (grupo)*>
+        <!ELEMENT grupo (nombre|nivel)*>
+        <!ATTLIST grupo
+                id CDATA #IMPLIED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT nivel (#PCDATA)>
+        <!ATTLIST nivel
+                tipo (CFGS | CFGM | FPBasica) #REQUIRED>
