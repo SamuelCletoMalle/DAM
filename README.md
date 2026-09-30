@@ -48,5 +48,3 @@ Java · Oracle SQL / PL-SQL · XML · DTD · XSD · IntelliJ IDEA · Git
 ---
 
 👤 **Samuel Cleto Malle** · [GitHub](https://github.com/SamuelCletoMalle)
-# DAM
-Ejercicios y practicas del ciclo DAM organizados por asignatura: Programacion (Java), Bases de Datos (PL/SQL) y Lenguaje de Marcas
