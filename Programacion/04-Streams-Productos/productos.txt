@@ -1,0 +1,5 @@
+1;Teclado;19.99;50
+2;Ratón;12.50;30
+3;Monitor;149.99;15
+4;Portátil;799.00;8
+5;Impresora;89.95;12
