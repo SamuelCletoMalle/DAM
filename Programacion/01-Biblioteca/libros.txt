@@ -1,0 +1,25 @@
+1001;Cien años de soledad;Juan Perez
+1002;El señor de los anillos;Maria Lopez
+1003;Don Quijote de la Mancha;Carlos Gomez
+1004;La sombra del viento;Ana Martinez
+1005;1984;Luis Rodriguez
+1006;Fahrenheit 451;Laura Sanchez
+1007;Crónica de una muerte anunciada;Pedro Ramirez
+1008;El principito;Sofia Torres
+1009;La metamorfosis;Andres Morales
+1010;Orgullo y prejuicio;Carmen Ruiz
+1011;Harry Potter y la piedra filosofal;Diego Fernandez
+1012;El código Da Vinci;Lucia Navarro
+1013;Los juegos del hambre;Miguel Castro
+1014;El alquimista;Paula Ortega
+1015;It;Javier Molina
+1016;Drácula;Elena Vega
+1017;La odisea;Roberto Fuentes
+1018;El hobbit;Natalia Rojas
+1019;Rayuela;Fernando Iglesias
+1020;El nombre de la rosa;Patricia Leon
+1021;La iliada;Daniel Pardo
+1022;Matar a un ruiseñor;Raquel Santos
+1023;El retrato de Dorian Gray;Victor Cruz
+1024;Ensayo sobre la ceguera;Beatriz Nunez
+1025;La casa de los espiritus;Hector Blanco
