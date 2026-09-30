@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ies">  <!--Ejercicio 1-->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codcentro" type="xs:string" pattern="[0-9]{8}" /> 
+        <xs:element name="grupos"> <!--Ejercicio 3-->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grupo" maxOccurs="1000" minOccurs="1">  
+                <xs:complexType>
+                  <xs:sequence>  
+                    <xs:element name="nombre" type="xs:string" />
+                    <xs:element name="nivel">  <!--Ejercicio 14-->
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="CFGS" />
+                          <xs:enumeration value="CFGM" />
+                          <xs:enumeration value="FPBasica" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence> <!--Ejercicio 12-->
+                  <xs:attribute name="id" type="xs:integer" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element> <!-- Ejercicio 3 -->
+        <xs:element name="alumnos" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="alumno" maxOccurs="1000" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence> <!--Ejercicio 7-->
+                    <xs:element name="direccion">
+                      <xs:complexType>
+                        <xs:sequence>  
+                        <xs:element name="codPostal" type="xs:string" minOccurs="0" />
+                          <xs:element name="provincia" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>  <!--Ejercicio 8-->
+                   <xs:element name="notaMedia" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:minInclusive value="0" />
+                          <xs:maxInclusive value="10" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence> <!--Ejercicio 4 -->
+                 <xs:attribute name="nif" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
