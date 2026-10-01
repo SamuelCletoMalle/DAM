@@ -86,13 +86,25 @@ Los ejercicios usan principalmente la tabla de ejemplo `EMPLE`.
 
 ```bash
 cd Programacion/02-Supermercado-Herencia
-javac *.java
+javac -encoding UTF-8 *.java
 java Programa
 ```
 
+## 🎓 Formación y certificados
+
+| Certificado | Entidad | Fecha |
+|---|---|---|
+| Fundamentos de Python 1 (Python Essentials 1) | Cisco Networking Academy / OpenEDG | 30/09/2026 |
+| Fundamentos de Python 2 (Python Essentials 2) | Cisco Networking Academy / OpenEDG | 01/10/2026 |
+| Cursor con Python: desarrollo inteligente con IA (8 h) | Curso online | 16/02/2026 |
+| Domina la IA con Gemini (2 h) | Curso online | 03/01/2026 |
+| Business English, Part 1 (8 h) | Curso online | 03/01/2026 |
+
+Además, mis prácticas de Python están en [CursoPython](https://github.com/SamuelCletoMalle/CursoPython).
+
 ## 🛠️ Tecnologías
 
-Java · Oracle SQL / PL-SQL · XML · DTD · XSD · IntelliJ IDEA · Git
+Java · Python · JavaScript · HTML · CSS · Oracle SQL / PL-SQL · XML · DTD · XSD · Bash · PowerShell · IntelliJ IDEA · Git
 
 ---
 
