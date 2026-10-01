@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul id="lista-tareas"></ul> <!-- Lista donde se cargarán las tareas -->
+
+    <script>
+        // Array de tareas
+        const tareas = [
+            "Tarea 1: Hacer la compra",
+            "Tarea 2: Limpiar la casa",
+            "Tarea 3: Estudiar JavaScript",
+            "Tarea 4: Hacer ejercicio"
+        ];
+
+        // Escucha el evento DOMContentLoaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Muestra una alerta al usuario indicando que el DOM está listo
+            alert("El DOM ha sido completamente cargado y está listo para ser manipulado.");
+
+            // Carga las tareas en la lista
+            const listaTareas = document.getElementById("lista-tareas");
+
+            // Itera sobre el array de tareas
+            tareas.forEach(function(tarea) {
+                // Crea un nuevo elemento de lista
+                const li = document.createElement("li");
+                li.textContent = tarea; // Establece el texto del elemento de lista
+                listaTareas.appendChild(li); // Agrega el elemento de lista a la lista
+            });
+        });
+    </script>
+</body>
+</html>

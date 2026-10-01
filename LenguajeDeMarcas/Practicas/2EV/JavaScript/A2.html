@@ -1,0 +1,30 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Impares</title>
+    <script>
+        
+        // Pedir el primer número al usuario y convertirlo a entero
+        let num1 = parseInt(prompt("Introduce el primer número:"));
+
+        // Pedir el segundo número al usuario y convertirlo a entero
+        let num2 = parseInt(prompt("Introduce el segundo número:"));
+
+        // Determinar el menor y el mayor de los dos números
+        let menor = Math.min(num1, num2);
+        let mayor = Math.max(num1, num2);
+
+        // Recorrer los números entre menor y mayor
+        for (let i = menor; i <= mayor; i++) {
+            // Si el número es par, lo mostramos en la consola
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
+  </script>
+</head>
+<body>
+</body>
+</html>

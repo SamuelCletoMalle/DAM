@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Animation with Canvas example</title>
+  </head>
+<body>
+  <h1>dibujo con canvas3sf</h1>
+
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+          Tu navegador no admite canvas
+          <script>
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          
+          ctx.beginPath();
+          ctx.strokeStyle = "red";  
+          ctx.moveTo(50, 0);
+          ctx.lineTo(150, 130);            
+          ctx.stroke();  
+          ctx.beginPath();
+          ctx.strokeStyle = "green";  
+          ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+          ctx.stroke();
+          </script>
+</canvas>
+<center>
+<p>algo</p>
+</center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <h1>Comentarios en el DOM</h1>
+    <button id="crear-comentario">Crear Comentario</button>
+    <ul id="lista-comentarios"></ul> <!-- Lista para mostrar los comentarios -->
+
+    <script>
+        // Agrega un evento de clic al botón
+        document.getElementById("crear-comentario").addEventListener("click", function() {
+            // Crea un comentario en el DOM
+            const comentarioTexto = prompt("Escribe tu comentario:"); // Pide al usuario que ingrese un comentario
+            if (comentarioTexto) {
+                const comentario = document.createComment(comentarioTexto); // Crea el comentario
+                document.body.appendChild(comentario); // Agrega el comentario al final del body
+
+                // Crea un nuevo elemento de lista para mostrar el comentario
+                const li = document.createElement("li");
+                li.textContent = comentarioTexto; // Establece el texto del elemento de lista
+                document.getElementById("lista-comentarios").appendChild(li); // Agrega el elemento de lista a la lista
+
+                console.log("Comentario creado:", comentario); // Muestra el comentario en la consola
+                alert("Comentario creado en el DOM.");
+            } else {
+                alert("No se ha ingresado ningún comentario."); // Mensaje si el usuario cancela
+            }
+        });
+    </script>
+</body>
+</html>

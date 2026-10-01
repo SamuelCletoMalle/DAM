@@ -1,0 +1,10 @@
+public class ImparNegativo {
+    static void numeroEntre5y9()   
+        Scaner sc=nwe Scanner (System.in);
+        System.out.println("Indica un número");
+        int n= scnestInt();
+        (n < 3 && n % 2 != 0) || numero > 9;
+        sc.close();
+}
+
+public class 

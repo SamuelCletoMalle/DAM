@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        // Función para realizar la operación matemática
+        function calcular(num1, num2, operacion) {
+            switch (operacion) {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "*":
+                    return num1 * num2;
+                case "/":
+                    return num2 !== 0 ? num1 / num2 : "Error: División por 0";
+                default:
+                    return "Operación no válida";
+            }
+        }
+
+        // Bucle para pedir números y operación hasta que uno de los números sea 0
+        while (true) {
+            let num1 = parseFloat(prompt("Introduce el primer número (0 para salir):"));
+            let num2 = parseFloat(prompt("Introduce el segundo número (0 para salir):"));
+
+            // Salir si alguno de los números es 0
+            if (num1 === 0 || num2 === 0) {
+                console.log("Operación finalizada.");
+                break;
+            }
+
+            let operacion = prompt("Introduce la operación (+, -, * o /):");
+
+            // Llamar a la función y mostrar el resultado en consola
+            console.log(`Resultado: ${calcular(num1, num2, operacion)}`);
+        }
+    </script>
+</body>
+</html>

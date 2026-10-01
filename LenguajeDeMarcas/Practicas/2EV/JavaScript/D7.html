@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Números</title>
+</head>
+<body>
+    <h1>Calculadora de Suma de Números</h1>
+    <div id="resultado"></div> <!-- Elemento para mostrar el resultado en la página -->
+    <script>
+        // Función principal que ejecuta la lógica de la aplicación
+        function sumarNumeros() {
+            // Inicializamos una variable para almacenar la suma
+            let suma = 0;
+
+            // Usamos un bucle para pedir 10 números al usuario
+            for (let i = 0; i < 10; i++) {
+                // Pedimos al usuario que ingrese un número
+                // parseFloat convierte la entrada a un número decimal
+                let numero = parseFloat(prompt("Por favor, ingresa el número " + (i + 1) + ":"));
+
+                // Verificamos si la entrada es un número válido
+                if (!isNaN(numero)) {
+                    // Si es un número válido, lo sumamos a la variable suma
+                    suma += numero;
+                } else {
+                    // Si no es un número válido, mostramos un mensaje de error
+                    console.log("Entrada no válida. Por favor, ingresa un número.");
+                    // Decrementamos i para que el usuario pueda volver a ingresar un número
+                    i--;
+                }
+            }
+
+            // Mostramos la suma total en la consola
+            console.log("La suma de los números ingresados es: " + suma);
+            
+            // Mostramos la suma total en un cuadro de alerta
+            alert("La suma de los números ingresados es: " + suma);
+            
+            // Mostramos la suma total en la página
+            document.getElementById("resultado").innerText = "La suma de los números ingresados es: " + suma;
+        }
+
+        // Llamamos a la función para ejecutar la aplicación
+        sumarNumeros();
+    </script>
+</body>
+</html>

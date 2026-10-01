@@ -1,0 +1,7 @@
+<!ELEMENT bdcomponentes (componente)+>   
+<!ELEMENT componente (nombre, (precio | precioiva), tipo*, medida)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT precioiva (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT medida (#PCDATA)>

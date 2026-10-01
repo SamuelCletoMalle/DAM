@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- <!DOCTYPE html>: Define el tipo de documento y especifica que es un archivo HTML5 -->
+    <meta charset="UTF-8">
+    <!-- <meta charset>: Define la codificación de caracteres del documento, comúnmente UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport">: Configura cómo debe mostrarse el contenido en dispositivos móviles -->
+    <meta name="description" content="Documentación completa sobre HTML">
+    <!-- <meta name="description">: Describe brevemente el contenido del documento para los motores de búsqueda -->
+    <meta name="author" content="I.E.S. Luis Vives - Desarrollo de Aplicaciones Web">
+    <!-- <meta name="author">: Especifica el autor del documento -->
+    <title>Guía Completa de HTML</title>
+    <!-- <title>: Define el título del documento, que aparece en la pestaña del navegador -->
+</head>
+<body>
+    <!-- <body>: Contiene todo el contenido visible de la página web -->
+
+    <!-- Encabezados de la página -->
+    <h1>Guía Completa de HTML</h1>
+    <!-- <h1>: Encabezado principal, usado para títulos importantes -->
+    <h2>Contenido y explicación de etiquetas</h2>
+    <!-- <h2>: Subtítulo o encabezado secundario -->
+
+    <!-- Párrafos de texto -->
+    <p>HTML (HyperText Markup Language) es un lenguaje de marcado usado para estructurar contenido en la web.</p>
+    <!-- <p>: Define un párrafo de texto -->
+
+    <!-- Listas ordenadas y desordenadas -->
+    <h3>Listas</h3>
+    <ol>
+        <!-- <ol>: Lista ordenada -->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ol>
+    <ul>
+        <!-- <ul>: Lista desordenada -->
+        <li>Elemento A</li>
+        <li>Elemento B</li>
+    </ul>
+
+    <!-- Enlaces con atributos -->
+    <h3>Enlaces</h3>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <!-- <a>: Define un enlace. Atributos:
+         - href: URL del destino.
+         - target="_blank": Abre en nueva pestaña. -->
+
+    <!-- Imágenes con atributos -->
+    <h3>Imágenes</h3>
+    <img src="imagen.jpg" alt="Ejemplo de imagen">
+    <!-- <img>: Inserta imágenes. Atributos:
+         - src: URL o ruta de la imagen.
+         - alt: Texto alternativo. -->
+
+    <!-- Tablas con filas y celdas -->
+    <h3>Tablas</h3>
+    <table border="1">
+        <!-- <table>: Contenedor de una tabla -->
+        <tr>
+            <!-- <tr>: Define una fila -->
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </tr>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+        </tr>
+    </table>
+
+    <!-- Formulario con varios campos -->
+    <h3>Formularios</h3>
+    <form action="/enviar" method="post">
+        <!-- <form>: Crea un formulario. Atributos:
+             - action: URL donde se envían los datos.
+             - method: Método de envío (GET o POST). -->
+        <label for="nombre">Nombre:</label>
+        <!-- <label>: Etiqueta para un campo -->
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]{1,50}" title="Solo letras y espacios, máximo 50 caracteres">
+        <!-- <input>: Campo de entrada. Atributos:
+             - type="text": Define un campo de texto.
+             - pattern: Expresión regular para restringir el formato del campo.
+             - title: Mensaje de ayuda para el usuario. -->
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- <input type="email">: Campo específico para correos electrónicos. -->
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" title="Debe contener 9 dígitos">
+        <!-- <input type="tel">: Campo específico para números de teléfono. -->
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número" required>
+        <!-- <input type="password">: Campo para contraseñas con restricciones avanzadas mediante pattern. -->
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="99" required>
+        <!-- <input type="number">: Campo para números. Atributos:
+             - min: Valor mínimo permitido.
+             - max: Valor máximo permitido. -->
+
+        <button type="submit">Enviar</button>
+        <!-- <button>: Botón para enviar el formulario. -->
+        <!--Validación de correos electrónicos:
+html
+
+<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+Contraseñas seguras:
+html
+
+<input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+Números de teléfono:
+html
+
+<input type="tel" pattern="\d{3}-\d{3}-\d{4}" required>
+
+Códigos postales:
+html
+
+<input type="text" pattern="\d{5}" required>
+-->
+            <!--
+            (?=.*[A-Za-z]): para que haya un mínimo y un máximo se usa (?=.{0,5}[A-Za-<])
+                Significado:
+                Esta parte asegura que la contraseña debe contener al menos una letra (mayúscula o minúscula).
+                Explicación técnica:
+                (?=.*[A-Za-z]): Es una búsqueda anticipada positiva (positive lookahead), que significa "asegurarse de que en algún lugar de la cadena aparezca al menos una letra (a-z o A-Z)".
+                El .* antes de [A-Za-z] significa que puede haber cualquier número de caracteres antes de encontrar la letra.
+            (?=.*\d):
+                Significado:
+                La contraseña debe contener al menos un dígito (número del 0 al 9).
+                Explicación técnica:
+                (?=.*\d): Similar a la primera parte, es otra búsqueda anticipada positiva, pero ahora busca un dígito (\d), que equivale a [0-9].
+            (?=.*[@$!%*?&]):
+                Significado:
+                La contraseña debe contener al menos un símbolo especial.
+                Los símbolos permitidos son @, $, !, %, *, ?, &.
+                Explicación técnica:
+                (?=.*[@$!%*?&]): Aquí se busca al menos uno de los símbolos especiales mencionados.
+                El .* al principio nuevamente permite que haya cualquier número de caracteres antes del símbolo especial.
+            [A-Za-z\d@$!%*?&]{8,}:
+                Significado:
+                La contraseña debe tener al menos 8 caracteres en total.
+                Puede estar compuesta de letras (mayúsculas o minúsculas), dígitos o símbolos especiales.
+                Explicación técnica:
+                [A-Za-z\d@$!%*?&]: Esto define los caracteres permitidos en la contraseña: letras mayúsculas (A-Z), letras minúsculas (a-z), dígitos (\d), y los símbolos especiales @$!%*?&.
+                {8,}: Esto asegura que haya al menos 8 caracteres en total. El número 8 es el valor mínimo, y no hay límite máximo.
+-->
+    </form>
+
+    <!-- Elementos semánticos -->
+    <h3>Elementos Semánticos</h3>
+    <header>
+        <!-- <header>: Define la cabecera del documento o sección -->
+        <h2>Cabecera del Documento</h2>
+    </header>
+    <section>
+        <!-- <section>: Agrupa contenido relacionado -->
+        <h3>Sección Importante</h3>
+        <p>Esta es una sección del contenido.</p>
+    </section>
+    <footer>
+        <!-- <footer>: Define el pie de página -->
+        <p>Creado por I.E.S. Luis Vives</p>
+    </footer>
+
+    <!-- Multimedia -->
+    <h3>Elementos Multimedia</h3>
+    <video controls width="320">
+        <!-- <video>: Reproduce un video. Atributos:
+             - controls: Muestra controles de reproducción.
+             - width: Ancho del video. -->
+        <source src="video.mp4" type="video/mp4">
+        <!-- <source>: Fuente del video -->
+        Tu navegador no soporta videos.
+    </video>
+
+    <audio controls>
+        <!-- <audio>: Reproduce audio. -->
+        <source src="audio.mp3" type="audio/mpeg">
+        <!-- <source>: Fuente del audio -->
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Etiquetas adicionales -->
+    <h3>Etiquetas Especiales</h3>
+    <mark>Texto resaltado</mark>
+    <!-- <mark>: Resalta texto -->
+    <abbr title="HyperText Markup Language">HTML</abbr>
+    <!-- <abbr>: Abreviatura con información adicional -->
+    <blockquote>Cita de un texto importante.</blockquote>
+    <!-- <blockquote>: Define citas largas -->
+</body>
+</html>

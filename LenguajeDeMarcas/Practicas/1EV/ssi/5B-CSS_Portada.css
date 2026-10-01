@@ -1,0 +1,118 @@
+h1{
+    color:white;
+    text-align: center;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+.portada {
+    background: url(/images/Pull-Bear-ropa.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+
+header .top-menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 0;
+}
+
+header .top-menu li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #504d4d;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu ul li a:hover {
+    background: #1e90ff;
+    transform: scale(1.05);
+}
+
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+}
+
+
+#menu-checkbox {
+    display: none;
+  
+}
+
+
+#menu-checkbox:checked ~ .menu {
+    left: 0;
+}
+
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+}
+h5{
+    color: white;
+    margin-top: 1000px;
+}

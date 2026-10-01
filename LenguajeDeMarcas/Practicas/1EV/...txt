@@ -1,0 +1,552 @@
+Camisetas:
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisetas</title>
+    <link rel="stylesheet" href="2-CSS_Camisetas.css">
+</head>
+<body>
+    
+    <div class="portada">
+        <br><h1>Camisetas</h1>
+
+        <div class="tabla-productos">
+            <table border="1">
+                <tr>
+                    <th colspan="3">Tabla de Productos</th>
+                </tr>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="/images/Camiseta1.jpeg" alt="Camiseta 1" style="width:100px;"></td>
+                    <td>Camiseta Rosa</td>
+                    <td>$29.99</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/camiseta2.jpg" alt="Camiseta 2" style="width:100px;"></td>
+                    <td>Camiseta Chevy Sport</td>
+                    <td>$24.99</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/camiseta3.jpg" alt="Camiseta 3" style="width:100px;"></td>
+                    <td>Camiseta Nude Project Cerezas</td>
+                    <td>$29.99</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/Camiseta4.jpg" alt="Camiseta 4" style="width:100px;"></td>
+                    <td>Camiseta China</td>
+                    <td>$25.99</td>
+                </tr>
+                <tr>
+                    <td><img src="/images/Camiseta5.jpg" alt="Camiseta 5" style="width:100px;"></td>
+                    <td>Camiseta Buenas noches</td>
+                    <td>$29.99</td>
+                </tr>
+                <!-- Celda vacía que ocupa todo el ancho de la tabla -->
+                <tr>
+                    <td colspan="3"></td> <!-- Esta es la celda vacía -->
+                </tr>
+            </table>
+        </div>
+        
+        <center>
+            <audio controls loop autoplay>
+            <source src="/images/Música para Tiendas, Locales de Ropa, Restobar, Bares, Restaurantes  Deep House Mix 2022.mp4" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </center>
+
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="menu-toggle">☰</label>
+
+        <div class="menu">
+            <label for="menu-checkbox" class="close-menu">✖</label>
+            <ul>
+                <li><a href="/Portada.html">💻Inicio💻</a></li>
+                <li><a href="/Catalogo.html">📰Catalogo📰</a></li>
+                <li><a href="/Sudaderas.html">👚Sudaderas👚</a></li>
+                <li><a href="/Zapatillas.html">👟Zapatillas👟</a></li>
+                <li><a href="/Accesorios.html">📿Accesorios🕶</a></li>
+                <li><a href="/Nosotros.html">🕴Sobre Nosotros🕴</a></li>
+                <li><a href="/Registro.html">🔐Registro🔐</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+CSS
+h1 {
+    color: white;
+    text-align: center;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.portada {
+    background-image: url('/images/Pull-Bear-ropa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+header .top-menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 0;
+}
+
+header .top-menu li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu ul li a:hover {
+    background: #1e90ff;
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked ~ .menu {
+    left: 0;
+}
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+h6 {
+    color: white;
+    margin-top: 1000px;
+}
+
+.tabla-productos {
+    max-height: 500px;
+    overflow-y: auto;
+    margin: 20px;
+    border: 1px solid #555;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #555; /* Añadido borde para todas las celdas */
+}
+
+th {
+    background-color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #444;
+}
+
+
+/* Puedes agregar un estilo opcional para las celdas vacías */
+tr:last-child td:empty {
+    background-color: #0bd0c6; /* Color de fondo para la celda vacía */
+    color: transparent; /* Para hacer el contenido vacío "invisible" */
+    height: 30px; /* Asegura que la celda vacía sea más alta */
+    border: none; /* Eliminamos el borde de la celda vacía si lo prefieres */
+}
+
+
+REGISTRO CSS
+.portada h1 {
+    color: white;
+    margin-top: 0px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.portada {
+    background-image: url('/images/Pull-Bear-ropa.jpg');
+    background-size: auto;
+    background-position: center;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    opacity: 0.9;  /* Añadido para transparencia a la portada */
+}
+
+header .top-menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 0;
+}
+
+header .top-menu li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;  /* Añadido para asegurarnos de que el menú se coloque encima de otros elementos */
+    opacity: 0.95;  /* Añadido para dar algo de transparencia al menú */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #504d4d;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu ul li a:hover {
+    background: #1e90ff;
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3;  /* Añadido para asegurarnos de que el botón esté encima del menú */
+    color: rgb(255, 255, 255);
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked ~ .menu {
+    left: 0;
+}
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    margin-top: 120px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    z-index: 1;  /* Si necesitas que el formulario esté debajo de otros elementos, puedes ajustar el z-index */
+}
+
+table {
+    text-align: left;
+}
+
+
+NOSOTROS
+HTML Y CSS
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            text-align: center;
+            background-color: blanchedalmond;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .lista {
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .informacion {
+            margin-left: 20px;
+            padding: 20px;
+        }
+
+        .portada {
+            height: 100vh;
+            color: rgb(71, 29, 29);
+            padding-top: 100px;
+        }
+
+        /* Menú Pegajoso */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            background: #1e90ff;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        /* Columna de texto */
+        .contenido {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .columna {
+            flex: 1;
+            min-width: 300px;
+            max-width: 45%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para las imágenes */
+        .imagenes img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Estilo para los enlaces */
+        .informacion a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .informacion a:hover {
+            color: #1e90ff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Menú Pegajoso -->
+    <div class="menu sticky">
+        <ul>
+            <li><a href="/Portada.html">💻Inicio💻</a></li>
+            <li><a href="/Catalogo.html">📰Catalogo📰</a></li>
+            <li><a href="/Sudaderas.html">👚Sudaderas👚</a></li>
+            <li><a href="/Sudaderas.html">👕Camisetas👕</a></li>
+            <li><a href="/Zapatillas.html">👟Zapatillas👟</a></li>
+            <li><a href="/Accesorios.html">📿Accesorios🕶</a></li>
+            <li><a href="/registrotienda.html">🔐Registro🔐</a></li>
+        </ul>
+    </div>
+    
+    <!-- Contenido Principal -->
+    <div class="portada">
+        <h1>Sobre nosotros</h1>
+        <figcaption>Nuestra tienda</figcaption>
+        <div class="imagenes">
+            <img src= "/images/Local.jpeg" width="400" alt="Nuestra tienda"> 
+        </div>
+        
+        <div class="contenido">
+            <div class="columna">
+                <p>
+                    SIS fue fundada en 2020 como una marca del Grupo Moda Global, con el objetivo de ofrecer moda moderna y accesible para un público joven y en constante evolución. En pocos años, la marca se estableció como un referente en el sector de la moda juvenil, abriendo más de 50 tiendas en diversas ciudades y expandiéndose rápidamente a nivel internacional. Actualmente, SIS cuenta con más de 500 tiendas en más de 50 países.
+                </p>
+                <p>
+                    El éxito de SIS se basa en un modelo de negocio ágil y flexible, que le permite mantenerse siempre a la vanguardia de las últimas tendencias. A través de un proceso continuo de investigación de mercado y retroalimentación directa de los clientes, la marca puede reaccionar con rapidez a las demandas cambiantes, actualizando sus colecciones con frecuencia. Con un equipo de 3 diseñadores y más de 5000 trabajadores, SIS lanza cada año más de 3000 nuevos productos.
+                </p>
+            </div>
+
+            <div class="columna">
+                <img src= "/images/Tia1.jpeg" width="300" alt="Imagen de la tienda">
+                <p>
+                    El público de SIS está compuesto por jóvenes que siguen las últimas tendencias y buscan expresarse a través de su estilo. Son personas apasionadas por el estilo, la moda, las redes sociales y las nuevas tecnologías, siempre a la vanguardia de la moda urbana. Este grupo valora la comodidad y el estilo, y busca prendas que reflejen su personalidad, todo mientras se mantienen conectados con lo más actual en moda.
+                </p>
+            </div>
+        </div>
+
+        <h2>Líneas de Producto</h2>
+        <div class="lista">
+            <ul style="list-style-type: circle;">
+                <li>Sudaderas: El núcleo de la oferta de SIS, con diseños modernos, cómodos y de calidad.</li>
+                <li>Camisetas: Prendas esenciales para cualquier guardarropa juvenil, con estampados actuales.</li>
+                <li>Zapatillas: Modelos cómodos y de alto impacto visual.</li>
+                <li>Accesorios: Bolsos, gorras y otros artículos esenciales.</li>
+            </ul>
+        </div>    
+
+        <div class="informacion">
+            <h3>Oficinas</h3>
+            <p>Oficinas Centrales SIS<br>
+            Edificio SIS<br>
+            Avenida de Luis Vives 123, 28015 Madrid, España</p>
+
+            <h3>Redes sociales</h3>
+            <p><a href="https://www.instagram.com/">Instagram: SIS_globalmoda</a><br>
+            <a href="https://www.tiktok.com/es/">TikTok: SIS_globalmoda</a><br>
+            <a href="https://x.com/?lang=es">Twitter: SIS_globalmoda</a></p>
+            <p>Teléfono: 912764726/628388907</p>
+        </div>
+    </div>
+
+</body>
+</html>
+

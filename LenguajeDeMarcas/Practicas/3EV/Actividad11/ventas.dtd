@@ -1,0 +1,13 @@
+<!ELEMENT informe (cabecera, datos)>
+<!ELEMENT cabecera (editorial, titulo, descripcion, fecha)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT datos (region, region, region)>
+<!ELEMENT region (trimestre, trimestre, trimestre, trimestre)>
+<!ATTLIST region nombre (Norte | Centro | Sur) #REQUIRED>
+
+<!ELEMENT trimestre (#PCDATA)>
+<!ATTLIST trimestre numero (1 | 2 | 3 | 4) #REQUIRED>

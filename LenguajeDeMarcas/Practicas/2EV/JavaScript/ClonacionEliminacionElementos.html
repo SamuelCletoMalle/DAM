@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Lista de Elementos</h1>
+    <ul id="mi-lista">
+        <li id="elemento-a-clonar">Elemento a Clonar</li>
+        <li id="elemento-a-eliminar">Elemento a Eliminar</li>
+    </ul>
+    <button id="boton-clonar">Clonar Elemento</button>
+    <button id="boton-eliminar">Eliminar Elemento</button>
+    <p id="contador">Elementos clonados: <span id="contador-clonados">0</span></p> <!-- Contador de elementos clonados -->
+
+    <script>
+        let contadorClonados = 0; // Inicializa el contador de elementos clonados
+
+        document.getElementById("boton-clonar").addEventListener("click", function() {
+            const original = document.getElementById("elemento-a-clonar");
+            const clon = original.cloneNode(true); // Clona el elemento
+            document.getElementById("mi-lista").appendChild(clon); // Agrega el clon a la lista
+            contadorClonados++; // Incrementa el contador
+            document.getElementById("contador-clonados").textContent = contadorClonados; // Actualiza el contador en la interfaz
+            alert("Elemento clonado. Total de elementos clonados: " + contadorClonados);
+        });
+
+        document.getElementById("boton-eliminar").addEventListener("click", function() {
+            const elementoAEliminar = document.getElementById("elemento-a-eliminar");
+            elementoAEliminar.remove(); // Elimina el elemento de la lista
+            alert("Elemento eliminado.");
+        });
+    </script>
+</body>
+</html>

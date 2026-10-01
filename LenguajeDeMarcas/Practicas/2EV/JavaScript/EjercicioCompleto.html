@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Completo de Manipulación DOM</title>
+    <style>
+        .destacado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mi-titulo">Título Original</h1>
+    <p id="mi-parrafo">Este es un párrafo original.</p>
+    <div id="mi-div">Contenido en un div.</div>
+    <button id="mi-boton">Haz clic aquí</button>
+    <ul id="mi-lista">
+        <li>Elemento 1</li>
+        <li id="original">Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <a id="mi-enlace" href="#">Enlace original</a>
+
+    <script>
+        // Modificación de contenido
+        const parrafo = document.getElementById("mi-parrafo");
+        parrafo.textContent = "Nuevo contenido"; // Cambia el texto del párrafo
+
+        const div = document.getElementById("mi-div");
+        div.innerHTML = "<b>Contenido en negrita</b>"; // Cambia el contenido HTML del div
+
+        const elemento = document.getElementById("mi-titulo");
+        elemento.outerHTML = "<h1 class='nuevo-titulo'>Nuevo Título</h1>"; // Reemplaza el título completo
+
+        // Clonar un elemento
+        const original = document.getElementById("original");
+        const clon = original.cloneNode(true); // Clona el elemento y sus descendientes
+        original.parentNode.insertBefore(clon, original.nextSibling); // Inserta el clon después del original
+
+        // Eliminar un elemento
+        const elementoAEliminar = document.getElementById("mi-enlace");
+        elementoAEliminar.outerHTML = ""; // Elimina el enlace al reemplazarlo por una cadena vacía
+
+        // Reemplazar un elemento por otro
+        const elementoAntiguo = document.getElementById("mi-enlace");
+        elementoAntiguo.outerHTML = "<a href='https://www.ejemplo.com'>Nuevo Enlace</a>"; // Reemplaza el enlace
+
+        // Modificando atributos
+        const enlace = document.getElementById("mi-enlace");
+        enlace.setAttribute("href", "https://www.ejemplo.com"); // Cambia el atributo href
+
+        // Agregando un nuevo elemento
+        const lista = document.getElementById("mi-lista");
+        const nuevoItem = document.createElement("li");
+        nuevoItem.textContent = "Nuevo item"; // Crea un nuevo elemento de lista
+        lista.appendChild(nuevoItem); // Agrega el nuevo elemento a la lista
+
+        // Modificando el estilo
+        const boton = document.getElementById("mi-boton");
+        boton.style.backgroundColor = "red"; // Cambia el color de fondo del botón
+        boton.style.color = "white"; // Cambia el color del texto del botón
+
+        // Manejando eventos
+        boton.addEventListener("click", function() {
+            alert("¡Has hecho clic!"); // Muestra una alerta al hacer clic en el botón
+        });
+
+        // Eventos de ratón
+        boton.addEventListener("mouseover", function() {
+            console.log("El ratón está sobre el botón."); // Mensaje en consola al pasar el ratón
+        });
+
+        // Eventos de teclado
+        document.addEventListener("keydown", function(event) {
+            console.log(`Tecla presionada: ${event.key}`); // Muestra la tecla presionada
+        });
+
+        // Selección de elementos
+        const primerElemento = document.getElementById("mi-parrafo");
+        console.log(primerElemento.nodeName); // Imprime "P"
+
+        const siguienteElemento = primerElemento.nextElementSibling;
+        console.log(siguienteElemento.nodeName); // Imprime "DIV"
+
+        // Verificando si un elemento tiene hijos
+        console.log(lista.hasChildNodes()); // Imprime true si la lista tiene hijos
+
+        // Evento DOMContentLoaded
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("El DOM ha sido completamente cargado y está listo para ser manipulado.");
+        });
+
+        // Ejemplo de uso de selectores CSS
+        const primerBoton = document.querySelector("#mi-boton");
+        console.log(primerBoton); // Selecciona el primer botón
+
+        const todosLosItems = document.querySelectorAll("li");
+        todosLosItems.forEach(item => {
+            console.log(item.textContent); // Imprime el texto de cada elemento de la lista
+        });
+
+        // Modificando clases
+        primerElemento.classList.add("destacado"); // Agrega una clase
+        primerElemento.classList.remove("destacado"); // Elimina una clase
+        console.log(primerElemento.classList.contains("destacado")); // Verifica si tiene la clase
+
+        // Creando un comentario
+        const comentario = document.createComment("Este es un comentario");
+        document.body.appendChild(comentario); // Agrega el comentario al final del body
+
+        // Manipulación de atributos
+        const nuevoAtributo = document.createAttribute("data-nuevo");
+        nuevoAtributo.value = "valor";
+        enlace.setAttributeNode(nuevoAtributo); // Asigna un nuevo atributo al enlace
+
+        // Obtener un atributo
+        const valorHref = enlace.getAttribute("href");
+        console.log(`Valor del atributo href: ${valorHref}`); // Imprime el valor del atributo href
+
+        // Eliminar un atributo
+        enlace.removeAttribute("data-nuevo"); // Elimina el atributo que se agregó
+    </script>
+</body>
+</html>

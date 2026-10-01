@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="miId">
+        <p>Primer párrafo</p>
+        <span>Un span</span>
+        <p>Segundo párrafo</p>
+      </div>
+     <p>párrafo posterior</p> 
+    <script>
+        //Ten en cuenta que hay espacios en blanco entre los elementos, que son considerados nodos de texto.
+        console.log(document.getElementById("miId").childNodes); // Imprimirá una lista de nodos
+        const parrafo1 = document.getElementById("miId").childNodes[0];
+        console.log("hijo 0:"+parrafo1.nodeName+", tipo de nodo: "+parrafo1.nodeType); 
+        console.log("hijo 1:"+document.getElementById("miId").childNodes[1].nodeName+", tipo de nodo: "+parrafo1.nodeType);
+        console.log("hijo 2:"+document.getElementById("miId").childNodes[2].nodeName+", tipo de nodo: "+parrafo1.nodeType);
+        console.log("hijo 3:"+document.getElementById("miId").childNodes[3].nodeName+", tipo de nodo: "+parrafo1.nodeType);
+        console.log("hijo 4:"+document.getElementById("miId").childNodes[4].nodeName+", tipo de nodo: "+parrafo1.nodeType);
+        console.log("hijo 5:"+document.getElementById("miId").childNodes[5].nodeName+", tipo de nodo: "+parrafo1.nodeType);
+        console.log("hijo 6:"+document.getElementById("miId").childNodes[6].nodeName+", tipo de nodo: "+parrafo1.nodeType); 
+        console.log("1er hijo directo:"+parrafo1.nodeName);  // Imprimirá “#text" (el espacio en blanco entre el div y el primer párrafo)
+        console.log("2do hijo: directo:"+parrafo1.nextSibling.nodeName); // Imprimirá "P" (el espacio en blanco entre los elementos)
+        console.log("2do hijo: sin blancos:"+parrafo1.nextElementSibling.nodeName); // Imprimirá "P"
+        console.log("3er hijo: sin blancos:"+parrafo1.nextElementSibling.nextElementSibling.nodeName); // Imprimirá "SPAN"
+        console.log(parrafo1.nextElementSibling.nextElementSibling.childNodes); 
+      </script>
+      
+</body>
+</html>

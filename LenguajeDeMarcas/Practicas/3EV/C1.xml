@@ -1,0 +1,17 @@
+<empresa>
+  <empleado>
+    <nombre>Samuel Cleto</nombre>
+    <puesto>Programador</puesto>
+    <sueldo>3000</sueldo>
+    <inicio>03/04/2025</inicio>
+    <departamento>
+      <nombre>IT</nombre>
+      <jefe>
+        <nombre>Jose Manuel</nombre>
+        <puesto>Gerente IT</puesto>
+        <sueldo>5000</sueldo>
+        <inicio>07/01/2015</inicio>
+      </jefe>
+    </departamento>
+  </empleado>
+</empresa>

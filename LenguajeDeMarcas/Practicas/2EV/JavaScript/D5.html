@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Clases</title>
+</head>
+<body>
+    <article class="pelicula">Dato 1</article>
+    <article class="pelicula">Dato 2</article>
+    <article class="pelicula">Dato 3</article>
+    <article class="documental">Dato 4</article>
+    <article class="serie">Dato 5</article>
+
+    <script>
+        // Seleccionar todos los elementos con la clase "pelicula" y "serie"
+        const peliculas = document.querySelectorAll('.pelicula');
+        const series = document.querySelectorAll('.serie');
+
+        // Combinar ambas listas en un solo array
+        const todos = [...peliculas, ...series];
+
+        // Recorrer los elementos y mostrar en la consola
+        for (let i = 0; i < todos.length; i++) {
+            console.log(todos[i].textContent); // Muestra el contenido de cada elemento
+        }
+    </script>
+</body>
+</html>

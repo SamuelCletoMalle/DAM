@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>un párrafo con una parte en <b>negrita</b> y 
+el resto normal</p>
+<p>Segundo<b> asd</b> párrafo</p>
+<script>
+var textoConEtiquetas = document.getElementsByTagName("p")[0].innerHTML;
+var texto2SinEtiquetas = document.getElementsByTagName("p")[1].textContent;
+// modificando la variable no se cambia el texto:
+// textoConEtiquetas.innerHTML="Texto <b>nuevo</b>";
+document.getElementsByTagName("p")[0].innerHTML="Texto <b>nuevo2</b>";
+alert(texto2SinEtiquetas);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE informe SYSTEM "ventas.dtd">
+
+<informe>
+    <cabecera>
+        <editorial>Ediciones Aran</editorial>
+        <titulo>Informe regional de ventas</titulo>
+        <descripcion>Informe de ventas para las regiones Norte, Centro y Sur</descripcion>
+        <fecha>30/12/2009</fecha>
+    </cabecera>
+    <datos>
+        <region nombre="Norte">
+            <trimestre numero="1">24000</trimestre>
+            <trimestre numero="2">38600</trimestre>
+            <trimestre numero="3">NO_INFO</trimestre>
+            <trimestre numero="4">NO_INFO</trimestre>
+        </region>
+        <region nombre="Centro">
+            <trimestre numero="1">NO_INFO</trimestre>
+            <trimestre numero="2">16080</trimestre>
+            <trimestre numero="3">25000</trimestre>
+            <trimestre numero="4">29000</trimestre>
+        </region>
+        <region nombre="Sur">
+            <trimestre numero="1">27000</trimestre>
+            <trimestre numero="2">31400</trimestre>
+            <trimestre numero="3">40100</trimestre>
+            <trimestre numero="4">30000</trimestre>
+        </region>
+    </datos>
+</informe>

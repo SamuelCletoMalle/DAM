@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <input id="nombre" placeholder="Producto">
+    <input id="cantidad" type="number" placeholder="Cantidad">
+    <button onclick="agregar()">Añadir</button>
+    <ul id="lista"></ul>
+    <p>Total: <span id="total">0</span></p>
+
+    <script>
+        let total = 0;
+        function agregar() {
+            let nombre = document.getElementById("nombre").value.trim();
+            let cantidad = parseInt(document.getElementById("cantidad").value);
+            if (!nombre || isNaN(cantidad) || cantidad <= 0) return alert("Datos inválidos");
+            let lista = document.getElementById("lista");
+            let item = document.createElement("li");
+            item.textContent = `${nombre} (${cantidad})`;
+            lista.appendChild(item);
+            total += cantidad;
+            document.getElementById("total").textContent = total;
+        }
+    </script>
+</body>
+</html>

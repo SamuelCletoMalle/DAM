@@ -1,0 +1,12 @@
+
+
+
+
+.img {
+    position: fixed; /* Fija la posición de la imagen */
+    top: 50px; /* Distancia desde la parte superior de la ventana */
+    right: 100px; /* Distancia desde la parte derecha de la ventana */
+    width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 1000; /* Asegúrate de que la imagen esté por encima de otros elementos */
+}

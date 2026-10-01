@@ -1,0 +1,43 @@
+-- Crear o reemplazar la función SUMANUMEROS
+CREATE OR REPLACE FUNCTION SUMANUMEROS
+(a NUMBER, b NUMBER)
+RETURN NUMBER
+IS
+    c NUMBER;  -- Variable para almacenar la suma
+BEGIN
+    c := a + b;  -- Sumar los dos números
+    RETURN c;  -- Devolver el resultado
+END SUMANUMEROS;
+/
+
+-- Activar la salida del servidor para poder ver los resultados de DBMS_OUTPUT
+SET SERVEROUTPUT ON;
+
+-- Bloque anónimo para llamar a la función SUMANUMEROS
+DECLARE
+    SUMA NUMBER;  -- Variable para almacenar el resultado de la suma
+    A NUMBER;     -- Variable para el primer número
+    B NUMBER;     -- Variable para el segundo número
+BEGIN
+    A := &IntroduceNumero1;  -- Solicitar el primer número al usuario
+    B := &IntroduceNumero2;  -- Solicitar el segundo número al usuario
+    SUMA := SUMANUMEROS(A, B);  -- Llamar a la función para obtener la suma
+    DBMS_OUTPUT.PUT_LINE('LA SUMA ES ' || SUMA);  -- Imprimir el resultado
+END;
+/
+
+-- Crear o reemplazar el procedimiento MAYORSALARIO
+CREATE OR REPLACE PROCEDURE MAYORSALARIO
+IS
+    MAXIMO NUMBER;  -- Variable para almacenar el salario máximo
+BEGIN
+    SELECT MAX(SALARIO) INTO MAXIMO FROM EMPLE;  -- Obtener el salario máximo de la tabla EMPLE
+    DBMS_OUTPUT.PUT_LINE('EL MAYOR SALARIO ES ' || MAXIMO);  -- Imprimir el resultado
+END;
+/
+
+-- Bloque anónimo para llamar al procedimiento MAYORSALARIO
+BEGIN
+    MAYORSALARIO;  -- Llamar al procedimiento
+END;
+/

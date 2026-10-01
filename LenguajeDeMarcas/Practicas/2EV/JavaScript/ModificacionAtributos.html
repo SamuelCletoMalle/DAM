@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h1>Cambiar Enlace</h1>
+    <a id="mi-enlace" href="https://www.ejemplo.com">Visitar Ejemplo</a>
+    <button id="cambiar-enlace">Cambiar Enlace</button>
+
+    <script>
+        // Agrega un evento de clic al botón
+        document.getElementById("cambiar-enlace").addEventListener("click", function() {
+            // Pide confirmación al usuario
+            const confirmacion = confirm("¿Estás seguro de que deseas cambiar el enlace?");
+            if (confirmacion) {
+                // Selecciona el enlace por su ID
+                const enlace = document.getElementById("mi-enlace");
+                // Cambia el atributo href del enlace a una nueva URL
+                enlace.setAttribute("href", "https://www.nuevoejemplo.com");
+                // Cambia el texto del enlace para reflejar la nueva URL
+                enlace.textContent = "Visitar Nuevo Ejemplo";
+                // Muestra una alerta al usuario para confirmar que el enlace ha sido cambiado
+                alert("El enlace ha sido cambiado.");
+            } else {
+                alert("El cambio de enlace ha sido cancelado."); // Mensaje si el usuario cancela
+            }
+        });
+    </script>
+</body>
+</html>

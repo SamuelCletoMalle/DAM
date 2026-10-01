@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="6B-CSS_Registro.css">
+</head>
+
+<body>
+    <div class="portada">
+        <center>
+            <br><h1 class="titulo">Registro de usuario</h1>
+            <fieldset class="formulario">
+                <form action="/registro" method="POST">
+                    <table>
+                        <tr>
+                            <td><label for="nombre">Nombre:</label></td>
+                            <td><input type="text" id="nombre" name="nombre" required maxlength="50"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Correo Electrónico:</label></td>
+                            <td>
+                                <input type="email" id="email" name="email" 
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                       title="Por favor, ingrese un correo electrónico válido." required>
+                            </td>    
+                     
+                        </tr>
+                 <tr>
+                     <td><label for="edad">Edad:</label></td>
+                     <td>
+                         <input type="number" id="edad" name="edad" min="1" max="120" required>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><label for="contraseña">Contraseña:</label></td>
+                     <td>
+                         <input type="password" id="contraseña" name="contraseña" required 
+                                minlength="8" 
+                                pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" 
+                                title="La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra y un número.">
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><label for="confirmar-contraseña">Confirmar Contraseña:</label></td>
+                     <td>
+                         <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required 
+                                minlength="8" 
+                                pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" 
+                                title="La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra y un número.">
+                     </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2"><button type="submit">Registrar</button></td>
+                 </tr>
+             </table>
+         </form>
+     </fieldset>
+ </center>
+ <audio controls autoplay loop>
+    <source src="/images/Música para Tiendas, Locales de Ropa, Restobar, Bares, Restaurantes  Deep House Mix 2022.mp4" type="audio/mp4">
+    Tu navegador no soporta la etiqueta de audio.
+</audio>
+
+ <input type="checkbox" id="menu-checkbox">
+ <label for="menu-checkbox" class="menu-toggle">☰</label>
+
+ <div class="menu">
+     <label for="menu-checkbox" class="close-menu">✖</label>
+     <ul>
+                <li><a href="/5A-Portada.html">💻Inicio💻</a></li>
+                <li><a href="/3A-Catalogo.html">📰Catalogo📰</a></li>
+                <li><a href="/7A-Sudaderas.html">👚Sudaderas👚</a></li>
+                <li><a href="/2A-Camisetas.html">👕Camisetas👕</a></li>
+                <li><a href="/8A-Zapatillas.html">👟Zapatillas👠</a></li>
+                <li><a href="/1A-Accesorios.html">📿Accesorios🕶</a></li>
+                <li><a href="/4A-Nosotros.html">🕴Sobre Nosotros🕴</a></li>
+     </ul>
+ </div>
+</div>
+</body>
+</html>
+                               

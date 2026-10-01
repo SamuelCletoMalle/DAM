@@ -1,0 +1,38 @@
+body {
+    background-color: #e6f0fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: goldenrod;
+}
+
+.green {
+    color: green;
+}

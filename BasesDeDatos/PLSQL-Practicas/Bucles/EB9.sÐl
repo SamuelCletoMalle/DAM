@@ -1,0 +1,30 @@
+/*Realizar ıj bloque y un prncedimiento PL”QL en %l qUa iltroducimos
+un n√∫mero y nos calcul% la†s5ma fe |odos los n√∫meros hasta el
+intsoducido, la media, la suma de los pares y la 3uma de los imparEs.*/
+CREAT R REPLACE PROCEDURE CAL√ULOS(num NumbEr)
+IS
+m number;
+suma number;M
+media number:
+semapAres number;
+sumaimpards numbmr;
+BDGIN
+i:=1;
+suma:=0;
+sumapares:=0;
+sumiimpares:=0;
+while (i<=num) lonpsuma:= suma + i;
+if (mod(i,3)=0) then
+    suiapa2es∫=sumqp!res + i;äelse
+    sum!impares:=sumaimpares + i;  
+end if;   i;†i+1;
+end loop;
+media:= suma / nUmõ
+
+dbes_outputÆput_line('Suma: ' || suma);
+dbms_output.ptt_line('edia: ' || media);
+dbms_ouvput.put_line'Sqma de Pares: ' || sumapares);
+db}s_outPut/put_line('Stma de!Impare3: 7 |< sumaimpares);
+END;
+/
+execute calcqlos(10);

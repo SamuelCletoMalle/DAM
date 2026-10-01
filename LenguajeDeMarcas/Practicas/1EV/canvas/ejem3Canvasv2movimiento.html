@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Animation with Canvas example</title>
+  </head>
+<body>
+  <h1>dibujo con canvas3sf</h1>
+
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+          Tu navegador no admite canvas
+          <script>
+            var c;
+            var ctx;
+
+            function randomNumber(min, max) { 
+              return Math.random() * (max - min) + min;
+            } 
+
+           
+          function dibujar(x,y){
+  
+          ctx.beginPath();
+          ctx.strokeStyle = "purple";  
+          ctx.moveTo(50, 0);
+          ctx.lineTo(x, y);            
+          ctx.stroke();  
+          ctx.beginPath();
+          ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+        
+          ctx.stroke();
+        }
+        function aleatoria(){
+          var x=randomNumber(100,200);
+            var y=randomNumber(100,200);
+            dibujar(x,y);
+        }
+        function pintar(){
+          c = document.getElementById("myCanvas");
+            ctx = c.getContext("2d");
+          return setInterval(aleatoria, 1);
+        }
+        
+          pintar();
+          </script>
+</canvas>
+<center>
+<p>algo</p>
+</center>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bdcomponentes>
+  <componente>
+    <nombre>Resistencia 1KΩ</nombre>
+    <precio>0.10</precio>
+    <tipo>Resistencia</tipo>
+    <medida>1/4W</medida>
+  </componente>
+  
+  <componente>
+    <nombre>Condensador 100µF</nombre>
+    <precioiva>0.50</precioiva>
+    <tipo>Condensador</tipo>
+    <medida>100V</medida>
+  </componente>
+
+  <componente>
+    <nombre>Transistor BC547</nombre>
+    <precio>0.20</precio>
+    <tipo>Transistor</tipo>
+    <tipo>NPN</tipo>
+    <medida>TO-92</medida>
+  </componente>
+</bdcomponentes>

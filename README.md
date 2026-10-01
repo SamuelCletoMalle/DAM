@@ -33,6 +33,27 @@ Los ejercicios usan principalmente la tabla de ejemplo `EMPLE`.
 | [DTD](LenguajeDeMarcas/DTD) | DTD de un instituto (alumnos y grupos) con un XML de ejemplo |
 | [XSD](LenguajeDeMarcas/XSD) | El mismo modelo como XML Schema, con patrones, enumeraciones y atributos |
 
+## 🗂️ Más material del ciclo
+
+### ☕ Programación (más ejercicios)
+| Carpeta | Contenido |
+|---|---|
+| `Programacion/07-Agenda-Contactos` | Agenda por consola con altas, bajas, búsqueda por nombre o prefijo, orden alfabético y guardado en fichero (`ArrayList`, `Comparable`, excepciones, `try-with-resources`) |
+| `Programacion/1EV-Ejercicios-2025-26` | Series de ejercicios A–N del curso 25/26: clases y objetos (CuentaCorriente, Fracción, Punto, Triángulo, Fútbol, Reloj, Seguro), bucles, arrays, **Hundir la Flota**, Pizzería, ficheros y herencia |
+| `Programacion/2024-25/1EV-Arrays-y-Clases` | Arrays y clases del curso 24/25: almacén, alquiler de vehículos, hotel, buscaminas, Snake, la flota, rotación y ordenación de arrays |
+| `Programacion/2024-25/2EV-Ficheros-Cadenas-Recursividad` | Ficheros (mover, buscar palabras, tamaños), cadenas, expresiones regulares, cifrado César, Fibonacci recursivo |
+| `Programacion/2024-25/3EV-Herencia-Colecciones-Graficos` | Calculadora binaria gráfica, herencia de figuras, prioridades de pacientes y radar con colecciones |
+
+### 🗄️ Bases de Datos (más ejercicios)
+| Carpeta | Contenido |
+|---|---|
+| `BasesDeDatos/SQL-Consultas-y-Vistas` | Prácticas 6.x: Personas, Multinacional, Universidad, Instituto, creación de vistas, Red de Metro, Universidad Popular, Vendedores |
+| `BasesDeDatos/PLSQL-Practicas` | Bucles, cursores, disparadores, funciones y procedimientos, más 15 ejercicios básicos de bloques y procedimientos |
+| `BasesDeDatos/Liga-Futbol` | Mini proyecto: modelo de una liga con tablas, claves, vista de resultados, función de puntos, procedimiento de clasificación y trigger de validación |
+
+### 🏷️ Lenguaje de Marcas
+`LenguajeDeMarcas/Practicas` reúne las prácticas de HTML, CSS, formularios, JavaScript (validaciones y expresiones regulares), canvas y XML de los tres trimestres.
+
 ## ▶️ Cómo ejecutar los proyectos Java
 
 ```bash

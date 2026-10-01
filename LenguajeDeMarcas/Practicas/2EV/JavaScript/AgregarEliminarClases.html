@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style>
+        /* Estilo para la clase destacado */
+        .destacado {
+            color: red; /* Cambia el color del texto a rojo */
+            font-weight: bold; /* Hace el texto en negrita */
+            text-decoration: underline; /* Subraya el texto */
+            transition: all 0.5s ease; /* Transición suave para el efecto visual */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mi-titulo">Título Original</h1>
+    <button id="boton-destacar">Destacar Título</button>
+    <button id="boton-quitar">Quitar Destacar</button>
+
+    <script>
+        // Selecciona el título por su ID
+        const titulo = document.getElementById("mi-titulo");
+
+        // Agrega un evento de clic al botón de destacar
+        document.getElementById("boton-destacar").addEventListener("click", function() {
+            // Agrega la clase "destacado" al título
+            titulo.classList.add("destacado");
+            // Muestra una alerta al usuario para confirmar que el título ha sido destacado
+            alert("El título ha sido destacado.");
+        });
+
+        // Agrega un evento de clic al botón de quitar
+        document.getElementById("boton-quitar").addEventListener("click", function() {
+            // Elimina la clase "destacado" del título
+            titulo.classList.remove("destacado");
+            // Muestra una alerta al usuario para confirmar que el título ha dejado de estar destacado
+            alert("El título ha dejado de estar destacado.");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="SaludoPersonalizado.html" method="get">
+        <label for="dato1"> Nombre:</label>
+        <input type="text" id="dato1" autofocus name="nombre" size="20" maxlength="9" required>
+        <br>
+        <!-- <label for="dato2"> Apellido</label> -->
+        <label for="dato2"> Apellido:</label>
+         <input type="text" id="dato2" name="apellido"  placeholder="Introduzca aquí el Apellido"><br>
+         <label for="dato3"> CP:</label>
+         <input type="text" id="dato3" name="cp"  placeholder="código postal"  pattern="[0-9]{5}" title="Introduzca 5 números" required><br>
+         <label> id:
+         <input type="text" id="dato4" name="id"  placeholder="identificador" 
+         minlength="4"  title="Introduzca, al menos, 4 caracteres" required>
+        </label><br>
+        <input type="submit">
+        </form>
+</body>
+</html>

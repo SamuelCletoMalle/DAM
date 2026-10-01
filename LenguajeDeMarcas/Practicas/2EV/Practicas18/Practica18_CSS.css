@@ -1,0 +1,30 @@
+table {
+    width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.spacing {
+    border-spacing: 10px;
+    border: 2px solid black;
+}
+
+.collapse {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.collapse td, .spacing td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.collapse td:empty, .spacing td:empty {
+    background-color: lightgray;
+}
+
+.empty-hide td:empty {
+    visibility: hidden;
+}

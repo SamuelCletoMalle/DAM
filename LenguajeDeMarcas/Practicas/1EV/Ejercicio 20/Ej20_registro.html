@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form action="Ej20_login.html" method="POST" onsubmit="return validateForm()">
+        <h2>Datos Personales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios."><br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required pattern="[A-Za-z0-9]{6,15}" title="Solo se permiten letras y números, entre 6 y 15 caracteres."><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required minlength="8"><br>
+
+        <h2>Datos No Obligatorios</h2>
+        <label for="colorFavorito">Color Favorito:</label>
+        <input type="text" id="colorFavorito" name="colorFavorito"><br>
+
+        <label for="sueldo">Sueldo:</label>
+        <input type="range" id="sueldo" name="sueldo" min="0" max="100000" step="5000"><br>
+        <output id="sueldoOutput">0</output><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+        <a href="Ej20_Index.html">Volver</a>
+    </form>
+
+    <script>
+        const sueldoInput = document.getElementById('sueldo');
+        const sueldoOutput = document.getElementById('sueldoOutput');
+        sueldoInput.addEventListener('input', function() {
+            sueldoOutput.value = sueldoInput.value;
+        });
+
+        function validateForm() {
+           
+            return true; 
+        }
+    </script>
+</body>
+</html>

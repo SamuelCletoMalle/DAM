@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Impares</title>
+    <script>
+        function mostrarImpares() {
+           let numero = parseInt(prompt("Introduce un número:")); 
+           if (isNaN(numero) || numero < 1) {
+             alert("Por favor, introduce un número válido mayor que 0.");
+             return; 
+           }
+           let impares="";
+       for (let i = 1; i <= numero; i++) {
+          if (i % 2 !== 0) { 
+            impares= impares+ i + ", ";
+        }
+    }
+      alert(`Números impares entre 1 : `+ impares); 
+    }
+    mostrarImpares();
+  </script>
+</head>
+<body>
+</body>
+</html>

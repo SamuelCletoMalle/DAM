@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="3B-CSS_Catalogo.css">
+</head>
+<body>
+    <div class="Catalogo">
+        <br>
+        <h1>Productos de nuestra tienda</h1>
+        <table>
+            <tr>
+                <td>
+                    <div class="carrusel" id="carrusel1">
+                        <div class="foto">
+                            <img src="/images/Sudadera1.jpg" alt="Sudadera azul 30€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Sudadera2.jpg" alt="Sudadera negra 35€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Sudadera3.jpg" alt="Sudadera verde 28€">
+                        </div>
+                    </div>
+                    <h3><i>Sudaderas</i></h3>
+                    <div class="controles">
+                        <button onclick="anterior('carrusel1')">Anterior</button>
+                        <button onclick="siguiente('carrusel1')">Siguiente</button>
+                    </div>
+                </td>
+                <td>
+                    <div class="carrusel" id="carrusel2">
+                        <div class="foto">
+                            <img src="/images/Camiseta1.jpeg" alt="Camiseta rosa 15€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Camiseta2.jpg" alt="Camiseta blanca 18€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Camiseta3.jpg" alt="Camiseta marrón 20€">
+                        </div>
+                    </div>
+                    <h3><i>Camisetas</i></h3>
+                    <div class="controles">
+                        <button onclick="anterior('carrusel2')">Anterior</button>
+                        <button onclick="siguiente('carrusel2')">Siguiente</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="carrusel" id="carrusel3">
+                        <div class="foto">
+                            <img src="/images/Zapatilla1.jpeg" alt="Camiseta rosa 15€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Zapatilla2.jpeg" alt="Camiseta blanca 18€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Zapatilla3.jpeg" alt="Camiseta marrón 20€">
+                        </div>
+                    </div>
+                    <h3><i>Zapatillas</i></h3>
+                    <div class="controles">
+                        <button onclick="anterior('carrusel3')">Anterior</button>
+                        <button onclick="siguiente('carrusel3')">Siguiente</button>
+                    </div>
+                </td>
+            
+                <td>
+                    <div class="carrusel" id="carrusel4">
+                        <div class="foto">
+                            <img src="/images/Accesorio1.jpeg" alt="Camiseta rosa 15€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Accesorio2.jpeg" alt="Camiseta blanca 18€">
+                        </div>
+                        <div class="foto">
+                            <img src="/images/Accesorio3.jpeg" alt="Camiseta marrón 20€">
+                        </div>
+                    </div>
+                    <h3><i>Accesorios</i></h3>
+                    <div class="controles">
+                        <button onclick="anterior('carrusel4')">Anterior</button>
+                        <button onclick="siguiente('carrusel4')">Siguiente</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <input type="checkbox" id="menu-checkbox">
+
+    
+        <label for="menu-checkbox" class="menu-toggle">☰</label>
+
+        
+        <div class="menu">
+            <label for="menu-checkbox" class="close-menu">✖</label>
+            <ul>
+                <li><a href="/5A-Portada.html">💻Inicio💻</a></li>
+                <li><a href="/7A-Sudaderas.html">👚Sudaderas👚</a></li>
+                <li><a href="/2A-Camisetas.html">👕Camisetas👕</a></li>
+                <li><a href="/8A-Zapatillas.html">👟Zapatillas👠</a></li>
+                <li><a href="/1A-Accesorios.html">📿Accesorios🕶</a></li>
+                <li><a href="/4A-Nosotros.html">🕴Sobre Nosotros🕴</a></li>
+                <li><a href="/6A-Registro.html">🔐Registro🔐</a></li>
+              
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        const carruseles = {};
+    
+        function inicializarCarrusel(id) {
+            const fotos = document.querySelectorAll(`#${id} .foto`);
+            carruseles[id] = { fotos, indice: 0 };
+            mostrarFoto(id);
+        }
+    
+        function mostrarFoto(id) {
+            const { fotos, indice } = carruseles[id];
+            fotos.forEach((foto, i) => {
+                foto.style.display = (i === indice) ? "block" : "none";
+            });
+        }
+    
+        function cambiarFoto(id, direccion) {
+            const carrusel = carruseles[id];
+            carrusel.indice = (carrusel.indice + direccion + carrusel.fotos.length) % carrusel.fotos.length;
+            mostrarFoto(id);
+        }
+    
+        function siguiente(id) {
+            cambiarFoto(id, 1);
+        }
+    
+        function anterior(id) {
+            cambiarFoto(id, -1);
+        }
+    
+        inicializarCarrusel("carrusel1");
+        inicializarCarrusel("carrusel2");
+        inicializarCarrusel("carrusel3");
+        inicializarCarrusel("carrusel4");
+    </script>
+</body>
+</html>

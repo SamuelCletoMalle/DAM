@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        /* Estilo para el botón */
+        #mi-boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        /* Estilo para el mensaje de error */
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mi-titulo">Título Original</h1>
+    <input type="text" id="mi-input" placeholder="Escribe nuevo contenido aquí..."> <!-- Campo de entrada -->
+    <p id="mi-parrafo">Este es un párrafo original.</p>
+    <button id="mi-boton">Cambiar Contenido</button>
+    <p id="mensaje-error" class="error" style="display: none;"></p> <!-- Mensaje de error oculto -->
+
+    <script>
+        const boton = document.getElementById("mi-boton");
+        const parrafo = document.getElementById("mi-parrafo");
+        const input = document.getElementById("mi-input");
+        const mensajeError = document.getElementById("mensaje-error");
+
+        boton.addEventListener("click", function() {
+            const nuevoContenido = input.value.trim(); // Obtiene el valor del input y elimina espacios
+
+            if (nuevoContenido === "") {
+                // Si el input está vacío, muestra un mensaje de error
+                mensajeError.textContent = "Por favor, ingresa un contenido válido.";
+                mensajeError.style.display = "block"; // Muestra el mensaje de error
+            } else {
+                // Si el input tiene contenido, cambia el texto del párrafo
+                parrafo.textContent = nuevoContenido;
+                parrafo.style.color = "blue"; // Cambia el color del texto
+                mensajeError.style.display = "none"; // Oculta el mensaje de error
+                alert("El contenido del párrafo ha sido modificado.");
+            }
+        });
+    </script>
+</body>
+</html>

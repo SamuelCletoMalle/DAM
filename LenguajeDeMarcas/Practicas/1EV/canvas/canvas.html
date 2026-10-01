@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+    <!-- comentario-->
+</head>
+<body>
+    <h1>Sonido</h1>
+    <canvas id="miLienzo" width="300" height="300"
+    style="border:3px dotted #009900;">
+    <script>
+        var lienzo=document.getElementById("miLienzo");
+        var elem= lienzo.getContext("2d");
+        elem.beginPath();
+        elem.arc(150,150,50,2,2*Math.PI);
+        elem.stroke();
+    </script>
+</canvas>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Caja</title>
+</head>
+<body>
+    <form>
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="3" cols="30"></textarea>
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Deslizante con Números</title>
+    <style>
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .slider {
+            width: 80%;
+            margin: 10px;
+        }
+        .value {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="range" min="0" max="100" value="50" class="slider" id="mySlider">
+    <p>Valor: <span class="value" id="sliderValue">50</span></p>
+</div>
+
+<script>
+    // Obtener el elemento del slider y el elemento donde se mostrará el valor
+    const slider = documen

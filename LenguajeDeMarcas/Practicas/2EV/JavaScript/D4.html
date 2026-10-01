@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de innerHTML</title>
+    <style>
+        /* Estilo para el texto en color rojo */
+        .rojo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Uso de un innerHTML</h2>
+    <p id="demo1">Frase original</p>
+
+    <script>
+        // Cambiar el contenido del elemento con id "demo1"
+        document.getElementById("demo1").innerHTML = "<span class='rojo'>Nuevo Contenido</span>";
+    </script>
+</body>
+</html>
