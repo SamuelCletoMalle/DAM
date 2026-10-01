@@ -96,6 +96,8 @@ java Programa
 |---|---|---|
 | Fundamentos de Python 1 (Python Essentials 1) | Cisco Networking Academy / OpenEDG | 30/09/2026 |
 | Fundamentos de Python 2 (Python Essentials 2) | Cisco Networking Academy / OpenEDG | 01/10/2026 |
+| Curso de SEO para IA y Google (jornadas, 6 h) | BIG school | 02/05/2026 |
+| Iniciación al Desarrollo con IA: de 0 a Producción (jornadas, 6 h) | BIG school | 13/03/2026 |
 | Cursor con Python: desarrollo inteligente con IA (8 h) | Curso online | 16/02/2026 |
 | Domina la IA con Gemini (2 h) | Curso online | 03/01/2026 |
 | Business English, Part 1 (8 h) | Curso online | 03/01/2026 |
