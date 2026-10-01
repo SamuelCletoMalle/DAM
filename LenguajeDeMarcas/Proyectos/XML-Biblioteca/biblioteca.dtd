@@ -1,0 +1,9 @@
+<!ELEMENT biblioteca (libro+)>
+<!ATTLIST biblioteca nombre CDATA #REQUIRED>
+<!ELEMENT libro (titulo, autor, anio, ejemplares)>
+<!ATTLIST libro isbn CDATA #REQUIRED
+                genero (novela|poesia|informatica|ensayo) #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT ejemplares (#PCDATA)>

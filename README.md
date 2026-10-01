@@ -39,6 +39,9 @@ Los ejercicios usan principalmente la tabla de ejemplo `EMPLE`.
 | Carpeta | Contenido |
 |---|---|
 | `Programacion/07-Agenda-Contactos` | Agenda por consola con altas, bajas, búsqueda por nombre o prefijo, orden alfabético y guardado en fichero (`ArrayList`, `Comparable`, excepciones, `try-with-resources`) |
+| `Programacion/08-Banco-Herencia` | Banco con cuentas de ahorro y corrientes (clase abstracta, herencia, polimorfismo), excepción propia por saldo insuficiente, transferencias y cierre de mes |
+| `Programacion/09-Inventario-Colecciones` | Inventario de tienda leído de un CSV: `LinkedHashMap`, streams, `groupingBy`, ventas con control de stock e informes |
+| `Programacion/10-Ahorcado` | Juego del ahorcado por consola con validación de entradas, letras usadas y dibujo ASCII |
 | `Programacion/1EV-Ejercicios-2025-26` | Series de ejercicios A–N del curso 25/26: clases y objetos (CuentaCorriente, Fracción, Punto, Triángulo, Fútbol, Reloj, Seguro), bucles, arrays, **Hundir la Flota**, Pizzería, ficheros y herencia |
 | `Programacion/2024-25/1EV-Arrays-y-Clases` | Arrays y clases del curso 24/25: almacén, alquiler de vehículos, hotel, buscaminas, Snake, la flota, rotación y ordenación de arrays |
 | `Programacion/2024-25/2EV-Ficheros-Cadenas-Recursividad` | Ficheros (mover, buscar palabras, tamaños), cadenas, expresiones regulares, cifrado César, Fibonacci recursivo |
@@ -50,9 +53,34 @@ Los ejercicios usan principalmente la tabla de ejemplo `EMPLE`.
 | `BasesDeDatos/SQL-Consultas-y-Vistas` | Prácticas 6.x: Personas, Multinacional, Universidad, Instituto, creación de vistas, Red de Metro, Universidad Popular, Vendedores |
 | `BasesDeDatos/PLSQL-Practicas` | Bucles, cursores, disparadores, funciones y procedimientos, más 15 ejercicios básicos de bloques y procedimientos |
 | `BasesDeDatos/Liga-Futbol` | Mini proyecto: modelo de una liga con tablas, claves, vista de resultados, función de puntos, procedimiento de clasificación y trigger de validación |
+| `BasesDeDatos/Biblioteca-Prestamos` | Socios, libros y préstamos: consultas (retrasos, más prestados), procedimientos `PRESTAR_LIBRO` y `DEVOLVER_LIBRO` y trigger de sanción |
 
 ### 🏷️ Lenguaje de Marcas
 `LenguajeDeMarcas/Practicas` reúne las prácticas de HTML, CSS, formularios, JavaScript (validaciones y expresiones regulares), canvas y XML de los tres trimestres.
+
+`LenguajeDeMarcas/Proyectos` incluye mini proyectos web y XML:
+
+| Carpeta | Contenido |
+|---|---|
+| `Calculadora-JS` | Calculadora con HTML, CSS (grid) y JavaScript |
+| `Lista-Tareas` | Lista de tareas con prioridades que se guarda en `localStorage` |
+| `Formulario-Validacion` | Registro con validación por expresiones regulares y comprobación de la letra del DNI |
+| `XML-Biblioteca` | Documento XML validado con su DTD y con su XSD (patrón de ISBN, enumeración de géneros y rangos) |
+
+### 🛠️ Entornos de Desarrollo – `Entornos/`
+| Carpeta | Contenido |
+|---|---|
+| `Pruebas-Unitarias` | Clase `Calculadora` con 13 pruebas (casos normales, límites y excepciones) y un mini ejecutor de tests sin librerías |
+| `Diagramas-UML` | Diagrama de clases de la biblioteca en PlantUML |
+| `Git` | Guía del flujo de trabajo con Git: commits, ramas, conflictos y `.gitignore` |
+
+### 🖥️ Sistemas Informáticos – `SistemasInformaticos/Scripts`
+| Script | Qué hace |
+|---|---|
+| `copia-seguridad.ps1` | Copia comprimida de una carpeta con fecha en el nombre y rotación de copias antiguas (PowerShell) |
+| `informe-sistema.sh` | Informe de equipo, uso de disco con alerta por umbral y procesos que más memoria usan (Bash) |
+| `alta-usuarios.sh` | Alta masiva de usuarios y grupos desde un CSV, con modo `--simular` (Bash) |
+
 
 ## ▶️ Cómo ejecutar los proyectos Java
 

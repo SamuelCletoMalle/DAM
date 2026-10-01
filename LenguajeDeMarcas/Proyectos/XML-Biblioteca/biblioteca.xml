@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca nombre="Biblioteca Municipal">
+    <libro isbn="9788420412146" genero="novela">
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <anio>1605</anio>
+        <ejemplares>2</ejemplares>
+    </libro>
+    <libro isbn="9788437604947" genero="poesia">
+        <titulo>Rimas y Leyendas</titulo>
+        <autor>Gustavo Adolfo Bécquer</autor>
+        <anio>1871</anio>
+        <ejemplares>1</ejemplares>
+    </libro>
+    <libro isbn="9788441532106" genero="informatica">
+        <titulo>Fundamentos de Java</titulo>
+        <autor>Varios autores</autor>
+        <anio>2020</anio>
+        <ejemplares>3</ejemplares>
+    </libro>
+</biblioteca>

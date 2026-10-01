@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="calculadora">
+        <div id="pantalla">0</div>
+        <div class="teclas">
+            <button data-accion="limpiar" class="especial">C</button>
+            <button data-accion="borrar" class="especial">⌫</button>
+            <button data-op="%" class="operador">%</button>
+            <button data-op="/" class="operador">÷</button>
+            <button data-num="7">7</button><button data-num="8">8</button><button data-num="9">9</button>
+            <button data-op="*" class="operador">×</button>
+            <button data-num="4">4</button><button data-num="5">5</button><button data-num="6">6</button>
+            <button data-op="-" class="operador">−</button>
+            <button data-num="1">1</button><button data-num="2">2</button><button data-num="3">3</button>
+            <button data-op="+" class="operador">+</button>
+            <button data-num="0" class="cero">0</button>
+            <button data-num=".">.</button>
+            <button data-accion="igual" class="igual">=</button>
+        </div>
+    </main>
+    <script src="calculadora.js"></script>
+</body>
+</html>

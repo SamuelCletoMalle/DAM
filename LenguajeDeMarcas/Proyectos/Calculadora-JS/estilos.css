@@ -1,0 +1,11 @@
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+body { background: #222; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+.calculadora { background: #333; padding: 16px; border-radius: 12px; width: 280px; }
+#pantalla { background: #111; color: #fff; text-align: right; font-size: 2rem; padding: 14px; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+.teclas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+button { padding: 16px 0; font-size: 1.1rem; border: none; border-radius: 8px; background: #555; color: #fff; cursor: pointer; }
+button:hover { filter: brightness(1.2); }
+.operador { background: #f39c12; }
+.especial { background: #7f8c8d; }
+.igual { background: #27ae60; }
+.cero { grid-column: span 2; }

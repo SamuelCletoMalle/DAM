@@ -1,0 +1,37 @@
+@startuml
+' Diagrama de clases de la biblioteca (PlantUML)
+skinparam classAttributeIconSize 0
+
+class Socio {
+  - codigo : int
+  - nombre : String
+  - sancionado : boolean
+  + puedePedirLibros() : boolean
+}
+
+class Libro {
+  - codigo : int
+  - titulo : String
+  - autor : String
+  - ejemplares : int
+  + hayEjemplares() : boolean
+}
+
+class Prestamo {
+  - fechaPrestamo : LocalDate
+  - fechaDevolucion : LocalDate
+  + estaVencido() : boolean
+  + devolver() : void
+}
+
+class Biblioteca {
+  + prestar(socio, libro) : Prestamo
+  + devolver(prestamo) : void
+  + librosDisponibles() : List<Libro>
+}
+
+Socio "1" -- "0..*" Prestamo : realiza
+Libro "1" -- "0..*" Prestamo : se presta en
+Biblioteca o-- "*" Socio
+Biblioteca o-- "*" Libro
+@enduml

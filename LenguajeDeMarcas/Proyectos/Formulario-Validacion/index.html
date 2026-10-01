@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de usuario</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #eef1f5; }
+        form { max-width: 380px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 10px; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+        .error { color: #c0392b; font-size: .85rem; min-height: 1em; }
+        button { margin-top: 18px; padding: 10px 18px; }
+        #ok { color: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <form id="registro" novalidate>
+        <h2>Crear cuenta</h2>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario">
+        <div class="error" id="e-usuario"></div>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email">
+        <div class="error" id="e-email"></div>
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" placeholder="12345678Z">
+        <div class="error" id="e-dni"></div>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave">
+        <div class="error" id="e-clave"></div>
+
+        <button type="submit">Registrarme</button>
+        <p id="ok"></p>
+    </form>
+    <script src="validar.js"></script>
+</body>
+</html>

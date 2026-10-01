@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="isbnTipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{13}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="generoTipo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="novela"/>
+            <xs:enumeration value="poesia"/>
+            <xs:enumeration value="informatica"/>
+            <xs:enumeration value="ensayo"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="autor" type="xs:string"/>
+                            <xs:element name="anio">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1000"/>
+                                        <xs:maxInclusive value="2100"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ejemplares" type="xs:nonNegativeInteger"/>
+                        </xs:sequence>
+                        <xs:attribute name="isbn" type="isbnTipo" use="required"/>
+                        <xs:attribute name="genero" type="generoTipo" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
